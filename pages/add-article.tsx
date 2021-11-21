@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import {useMutation,gql} from "@apollo/client";
+import Link from "next/link"
 
-export default function addTodo() {
+export default function AddArticle() {
 
     const [title,setTitle] = useState('');
     const [summary,setSummary] = useState('');
@@ -70,7 +71,7 @@ export default function addTodo() {
                 }
                 {
                     success_message ? (
-                        <p className="form-success">{success_message}. Go to <a href="/">home</a></p>
+                        <p className="form-success">{success_message}. Go to <Link href="/"><a>home</a></Link></p>
                     ) : null
                 }
                 <div className="form-group">

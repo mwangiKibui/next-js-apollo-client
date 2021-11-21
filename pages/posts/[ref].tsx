@@ -3,6 +3,7 @@ import {GetStaticProps} from 'next';
 import {gql} from "@apollo/client";
 import {getApolloClient} from "../../lib/apollo-client";
 import { ParsedUrlQuery } from 'querystring';
+import {useRouter} from "next/router";
 
 const GET_ARTICLE = gql`
     query GetArticle($articleId: ID) {
@@ -27,6 +28,13 @@ interface Iprops{
 }
 
 export default function Post({article}:Iprops) {
+
+    const router = useRouter();
+
+    if(router.isFallback){
+        return <h2>Loading...</h2>
+    }
+    
     return (
         <div className="container">
             <h3>{article['title']}</h3>
