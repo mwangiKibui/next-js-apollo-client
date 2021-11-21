@@ -1,0 +1,33 @@
+.navbarContainer{
+    width:100%;
+    padding:10px;
+    background-color:#cccc
+}
+
+.navbarContainer nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0px auto;
+}
+
+.navbarBrand {
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+.navbarList{
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarList ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.navbarList ul li{
+    margin-left: 10px;
+}
